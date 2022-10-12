@@ -115,7 +115,7 @@ body .header .navi-list-item a:hover::before {
   width: 20px;
   height: 1px;
 }
-body .header .navi :-webkit-full-page-media, body .header .navi _:future, body .header .navi :root .navi-list-item:hover::before a {
+body .header .navi-list-item :-webkit-full-page-media, body .header .navi-list-item _:future, body .header .navi-list-item :root a:hover::before {
   bottom: -1px;
 }
 body .header.active {
