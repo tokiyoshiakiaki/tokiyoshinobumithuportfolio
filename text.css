@@ -137,12 +137,6 @@ body .main .mv {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-@media screen and (max-width: 480px) {
-  body .main .mv.iPhone {
-    background-position: 100% 60%;
-    justify-content: flex-start;
-  }
-}
 @media screen and (max-width: 880px) {
   body .main .mv {
     background-position: 70% 60%;
@@ -184,6 +178,12 @@ body .main .mv .mv-text br {
   }
   body .main .mv .mv-text br {
     display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .main .mv.iPhone {
+    background-position: 100% 60%;
+    justify-content: flex-start;
   }
 }
 body .main .list-btn {
