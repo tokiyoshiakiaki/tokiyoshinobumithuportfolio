@@ -32,7 +32,7 @@ body .header {
   left: 0px;
   z-index: 10;
   height: 200vh;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
 }
 body .header.active {
@@ -49,12 +49,16 @@ body .header.active {
 }
 body .header .logo {
   margin: 0 0 45px;
-  -webkit-margin-collapse: 0 0 20px;
   padding: 20px 20px 0 20px;
   font-size: 40px;
   font-family: sans-serif;
   letter-spacing: 3px;
   line-height: 50px;
+}
+@media screen and (max-width: 880px) {
+  body .header .logo {
+    margin: 0 0 20px;
+  }
 }
 body .header .logo a {
   color: #fff;
@@ -110,6 +114,9 @@ body .header .navi-list-item a:hover::before {
   left: 102px;
   width: 20px;
   height: 1px;
+}
+body .header .navi :-webkit-full-page-media, body .header .navi _:future, body .header .navi :root .navi-list-item:hover::before a {
+  bottom: -1px;
 }
 body .header.active {
   left: 0%;
