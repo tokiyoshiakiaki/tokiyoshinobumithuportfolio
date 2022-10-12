@@ -26,3 +26,9 @@ $(function () {
     });  
 });
  
+$(function (){
+    if (navigator.userAgent.indexOf('iPhone') > 0) {
+        let body = document.getElementsByTagName('.mv')[0];
+        body.classList.add('iPhone');
+    }
+})
