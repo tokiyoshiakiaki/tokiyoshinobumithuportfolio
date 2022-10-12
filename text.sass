@@ -159,13 +159,6 @@ body {
             background-position:center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-
-            &.iPhone {
-                @include m.mq(sp) {
-                    background-position: 100% 60%;
-                    justify-content: flex-start;
-                }
-            }
             
             @include m.mq(tab) {
                 background-position: 70% 60%;
@@ -207,6 +200,12 @@ body {
                     }
             }
             
+        }
+        .mv.iPhone {
+            @include m.mq(sp) {
+                background-position: 100% 60%;
+                justify-content: flex-start;
+            }
         }
         
         .list-btn {
