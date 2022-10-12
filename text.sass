@@ -48,7 +48,7 @@ body {
         left: 0px;
         z-index: 10;
         height: 200vh;
-        background: rgba( 0, 0, 0, 0.4);
+        background: rgba( 0, 0, 0, 0.5);
         transition: all 0.5s;
         
         &.active {
@@ -64,12 +64,15 @@ body {
         }
         .logo {
             margin: 0 0 45px;
-            -webkit-margin-collapse: 0 0 20px;
             padding: 20px 20px 0 20px;
             font-size: 40px;
             font-family: sans-serif;
             letter-spacing: 3px;
             line-height: 50px;
+
+            @include m.mq(tab) {
+                margin: 0 0 20px;
+            }
 
             a {
                 color: #fff;
@@ -130,13 +133,12 @@ body {
                         height: 1px;
                     }
 
-                }
-                :-webkit-full-page-media, _:future, :root a:hover::before {
-                    bottom: -1px;
-                  }
-
+                }  
             }
             
+            :-webkit-full-page-media, _:future, :root .navi-list-item:hover::before a {
+                bottom: -1px;
+            }
         }
     }
     
