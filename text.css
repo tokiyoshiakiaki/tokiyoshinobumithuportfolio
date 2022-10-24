@@ -124,48 +124,49 @@ body .header.active {
 body .main {
   background: #fcf8f3;
 }
-body .main .mv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 100px;
+body .main .mv .mv-images::before {
+  display: block;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 100vw;
-  height: calc((100vw - 35px) * 0.798);
+  height: 100vh;
   background-image: url("./images/mv04.JPG");
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 @media screen and (max-width: 880px) {
-  body .main .mv {
-    height: 100vh;
+  body .main .mv .mv-images::before {
     background-position: 70% 60%;
-    justify-content: flex-start;
   }
 }
 @media screen and (max-width: 480px) {
-  body .main .mv {
+  body .main .mv .mv-images::before {
     background-position: 80% 60%;
-    justify-content: flex-start;
   }
 }
 body .main .mv .mv-text {
-  margin-left: 25%;
-  font-size: 25px;
-  font-family: sans-serif;
+  position: absolute;
+  bottom: 105%;
+  left: 30%;
+  font-size: 26px;
   color: #292c2f;
+  font-family: sans-serif;
   letter-spacing: 5px;
   text-shadow: 0px 0px 2px #fff;
+  z-index: 10;
 }
 @media screen and (max-width: 1200px) {
   body .main .mv .mv-text {
-    margin-left: 200px;
+    left: 40%;
+    width: 340px;
   }
 }
 @media screen and (max-width: 880px) {
   body .main .mv .mv-text {
-    margin-left: 21px;
+    left: 21px;
   }
 }
 body .main .mv .mv-text br {
@@ -181,7 +182,7 @@ body .main .mv .mv-text br {
     display: block;
   }
 }
-body .main .list-btn {
+body .main .mv .list-btn {
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -193,51 +194,51 @@ body .main .list-btn {
   z-index: 100;
   transition: all 0.2s linear;
 }
-body .main .list-btn div {
+body .main .mv .list-btn div {
   width: 30px;
   height: 2px;
   background: #292c2f;
   transition: all 0.2s linear;
 }
 @media screen and (min-width: 880px) {
-  body .main .list-btn {
+  body .main .mv .list-btn {
     display: none;
   }
 }
-body .main .list-btn.active div:nth-child(1) {
+body .main .mv .list-btn.active div:nth-child(1) {
   background: #fff;
   transform: translateY(9px) rotate(45deg);
   transition: all 0.2s linear;
 }
-body .main .list-btn.active div:nth-child(2) {
+body .main .mv .list-btn.active div:nth-child(2) {
   width: 0px;
   transition: all 0.2s linear;
 }
-body .main .list-btn.active div:nth-child(3) {
+body .main .mv .list-btn.active div:nth-child(3) {
   background: #fff;
   transform: translateY(-9px) rotate(-45deg);
   transition: all 0.2s linear;
 }
-body .main .logo-responsive {
+body .main .mv .logo-responsive {
   position: absolute;
   display: none;
-  top: -7px;
+  bottom: 109.5%;
   left: 21px;
   font-size: 40px;
   font-family: sans-serif;
   letter-spacing: 3px;
   line-height: 50px;
 }
-body .main .logo-responsive a {
+body .main .mv .logo-responsive a {
   color: #292c2f;
   text-shadow: 0px 0px 2px #fff;
 }
 @media screen and (max-width: 880px) {
-  body .main .logo-responsive {
+  body .main .mv .logo-responsive {
     display: block;
   }
 }
-body .main .logo-responsive.active {
+body .main .mv .logo-responsive.active {
   display: none;
 }
 body .main .contents {
@@ -268,6 +269,10 @@ body .main .contents-title {
   font-size: 20px;
   font-family: sans-serif;
   letter-spacing: 5px;
+}
+body .main #about {
+  margin-top: 695px;
+  padding-top: 80px;
 }
 body .main #about .contents-about {
   display: flex;
@@ -642,6 +647,7 @@ body .main #contact .mail a:hover {
   border-bottom: 0;
 }
 body .footer {
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
