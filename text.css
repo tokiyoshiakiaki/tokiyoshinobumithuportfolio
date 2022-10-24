@@ -30,8 +30,8 @@ body .header {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 10;
-  height: 200vh;
+  z-index: 50;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
 }
@@ -130,7 +130,7 @@ body .main .mv {
   align-items: center;
   margin-bottom: 100px;
   width: 100vw;
-  height: 100vh;
+  height: calc((100vw - 35px) * 0.798);
   background-image: url("./images/mv04.JPG");
   background-size: cover;
   background-position: center center;
@@ -139,6 +139,7 @@ body .main .mv {
 }
 @media screen and (max-width: 880px) {
   body .main .mv {
+    height: 100vh;
     background-position: 70% 60%;
     justify-content: flex-start;
   }
@@ -180,12 +181,6 @@ body .main .mv .mv-text br {
     display: block;
   }
 }
-@media screen and (max-width: 480px) {
-  body .main .mv.iPhone {
-    background-position: 100% 60%;
-    justify-content: flex-start;
-  }
-}
 body .main .list-btn {
   position: fixed;
   display: flex;
@@ -195,7 +190,7 @@ body .main .list-btn {
   left: 90%;
   width: 30px;
   height: 20px;
-  z-index: 30;
+  z-index: 100;
   transition: all 0.2s linear;
 }
 body .main .list-btn div {
