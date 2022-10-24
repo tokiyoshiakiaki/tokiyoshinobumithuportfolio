@@ -148,44 +148,48 @@ body {
     }
     .main {
         background: #fcf8f3;
-        .mv {
-            @include display001;
-            margin-bottom: 100px;
-            width: 100vw;
-            height: calc((100vw - 35px)*0.798);
-            background-image: url('./images/mv04.JPG');
-            background-size: cover;
-            background-position:center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            
-            @include m.mq(tab) {
+        .mv{
+            .mv-images::before {
+                display: block;
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100vw;
                 height: 100vh;
-                background-position: 70% 60%;
-                justify-content: flex-start;
+                background-image: url('./images/mv04.JPG');
+                background-size: cover;
+                background-position: center center;
+                
+                @include m.mq(tab) {
+                    background-position: 70% 60%;
+                }
+    
+                @include m.mq(sp) {
+                    background-position: 80% 60%;
+                }
+                
             }
-
-            @include m.mq(sp) {
-                background-position: 80% 60%;
-                justify-content: flex-start;
-            }
-
             .mv-text {
-                margin-left: 25%;
-                font-size: 25px;
-                font-family: sans-serif;
+                position: absolute;
+                bottom: 105%;
+                left: 30%;
+                font-size: 26px;
                 color:  #292c2f;
+                font-family: sans-serif;
                 letter-spacing: 5px;
                 text-shadow: 0px 0px 2px #fff;
-
+                z-index: 10;
+    
                 @include m.mq(pc01) {
-                    margin-left: 200px;
-
+                    left: 40%;
+                    width: 340px;
                 }
                 @include m.mq(tab) {
-                    margin-left: 21px;
+                    left: 21px;
                 }
-
+    
                 br {
                     display: none;
                     }
@@ -199,68 +203,68 @@ body {
                         }
                     }
             }
-            
-        }
-        
-        .list-btn {
-            position: fixed;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            top: 20px;
-            left: 90%;
-            width: 30px;
-            height: 20px;
-            z-index: 100;
-            transition: all 0.2s linear;
-            div {
+            .list-btn {
+                position: fixed;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                top: 20px;
+                left: 90%;
                 width: 30px;
-                height: 2px;
-                background: #292c2f;
+                height: 20px;
+                z-index: 100;
                 transition: all 0.2s linear;
+                div {
+                    width: 30px;
+                    height: 2px;
+                    background: #292c2f;
+                    transition: all 0.2s linear;
+                }
+                @media screen and (min-width:880px) {
+                    display: none;
+                    
+                }
+
+                &.active {
+                    div:nth-child(1) {
+                        background: #fff;
+                        transform: translateY(9px) rotate(45deg);
+                    transition: all 0.2s linear;
+                    }
+                    div:nth-child(2) {
+                        width: 0px;
+                        transition: all 0.2s linear;
+                    }
+                    div:nth-child(3) {
+                        background: #fff;
+                        transform:translateY(-9px) rotate(-45deg);
+                        transition: all 0.2s linear;
+                    }
+                }
             }
-            @media screen and (min-width:880px) {
+            .logo-responsive {
+                position: absolute;
                 display: none;
+                bottom: 109.5%;
+                left: 21px;
+                font-size: 40px;
+                font-family: sans-serif;
+                letter-spacing: 3px;
+                line-height: 50px;
                 
+                a {
+                    color: #292c2f;
+                    text-shadow: 0px 0px 2px #fff;
+                }
+                @include m.mq(tab) {
+                    display: block;
+                }
+            }
+            .logo-responsive.active {
+                display:none ;
             }
         }
-        .list-btn.active {
-            div:nth-child(1) {
-                background: #fff;
-                transform: translateY(9px) rotate(45deg);
-            transition: all 0.2s linear;
-            }
-            div:nth-child(2) {
-                width: 0px;
-                transition: all 0.2s linear;
-            }
-            div:nth-child(3) {
-                background: #fff;
-                transform:translateY(-9px) rotate(-45deg);
-                transition: all 0.2s linear;
-            }
-        }
-        .logo-responsive {
-            position: absolute;
-            display: none;
-            top: -7px;
-            left: 21px;
-            font-size: 40px;
-            font-family: sans-serif;
-            letter-spacing: 3px;
-            line-height: 50px;
-            
-            a {
-                color: #292c2f;
-                text-shadow: 0px 0px 2px #fff;
-            }
-            @include m.mq(tab) {
-                display: block;
-            }
-        }
-        .logo-responsive.active {
-            display:none ;
-        }
+
         .contents {
             scroll-margin-top: 50px;
             margin: 0 auto 150px;
@@ -293,6 +297,8 @@ body {
         }   
         
         #about {
+            margin-top: 695px;
+            padding-top: 80px;
             .contents-about {
                 display: flex;
                 flex-wrap: wrap;
@@ -653,6 +659,7 @@ body {
         }
     }
     .footer {
+        background-color: #fff;
         @include display001;
         padding:0 5% 0 25% ;
         height: 20px;
