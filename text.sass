@@ -46,8 +46,8 @@ body {
         position: fixed;
         top: 0px;
         left: 0px;
-        z-index: 10;
-        height: 200vh;
+        z-index: 50;
+        height: 100vh;
         background: rgba( 0, 0, 0, 0.5);
         transition: all 0.5s;
         
@@ -148,12 +148,11 @@ body {
     }
     .main {
         background: #fcf8f3;
-
         .mv {
             @include display001;
             margin-bottom: 100px;
             width: 100vw;
-            height: 100vh;
+            height: calc((100vw - 35px)*0.798);
             background-image: url('./images/mv04.JPG');
             background-size: cover;
             background-position:center center;
@@ -161,6 +160,7 @@ body {
             background-attachment: fixed;
             
             @include m.mq(tab) {
+                height: 100vh;
                 background-position: 70% 60%;
                 justify-content: flex-start;
             }
@@ -201,12 +201,6 @@ body {
             }
             
         }
-        .mv.iPhone {
-            @include m.mq(sp) {
-                background-position: 100% 60%;
-                justify-content: flex-start;
-            }
-        }
         
         .list-btn {
             position: fixed;
@@ -217,7 +211,7 @@ body {
             left: 90%;
             width: 30px;
             height: 20px;
-            z-index: 30;
+            z-index: 100;
             transition: all 0.2s linear;
             div {
                 width: 30px;
