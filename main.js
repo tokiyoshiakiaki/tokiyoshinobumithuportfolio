@@ -5,7 +5,7 @@ $(function (){
 });
 
 $(function () {
-    $('.navi-list a[href*="#"]').click(function () {
+    $('.navi-list  a[href*="#"]').click(function () {
         var elmHash = $(this).attr('href');
         var pos = $(elmHash).offset().top;
         $('body,html').animate({scrollTop: pos}, 900);
@@ -25,10 +25,4 @@ $(function () {
         });
     });  
 });
- 
-$(function (){
-    if (navigator.userAgent.indexOf('iPhone') > 0) {
-        let body = document.getElementsByTagName('.mv')[0];
-        body.classList.add('iPhone');
-    }
-})
+
