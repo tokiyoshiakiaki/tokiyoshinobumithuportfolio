@@ -526,8 +526,8 @@ body {
                 }
                 
                 &-images {
+                    margin-bottom: 5px;
                     object-fit: cover;
-                    margin-bottom: 5px
                 }
                 .tag {
                     @include display001;
@@ -559,10 +559,19 @@ body {
                 .web-url {
                     font-size: 14px;
                     line-height: 25px;
-                    
+                    width: 95%;
+                    word-wrap: break-word;
                     a {
-                        margin-left: 5px;
+                        margin:0 0 15px 5px;
+                        padding-bottom: 5px;
+                        color: #927c60;
                         border-bottom: solid 1px #000;
+
+                        &:hover {
+                            color: #000;
+                            border-bottom: 0;
+                            opacity: 0.8;
+                        }
                     }
                 }
                 
@@ -639,7 +648,12 @@ body {
             .mail {
                 a {
                     margin-left: 5px;
+                    color: #927c60;
                     border-bottom: solid 1px #000;
+                    &:hover {
+                        color: #000;
+                        border-bottom: 0;
+                    }
                 }
             }
         }
