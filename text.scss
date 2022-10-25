@@ -90,7 +90,7 @@ body {
             }
             &-list-item {
                 margin-bottom: 35px;
-                a {
+                &-a {
                     position: relative;
                     font-size: 20px;
                     font-family: sans-serif;
@@ -134,7 +134,7 @@ body {
                     }
 
                 }  
-                :-webkit-full-page-media, _:future, .item:root :hover::before  {
+                :-webkit-full-page-media, _:future, .item:root .navi-list-item-a:hover::before  {
                     bottom: -1px;
                 }
             }
