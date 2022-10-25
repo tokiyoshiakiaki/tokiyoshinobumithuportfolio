@@ -77,7 +77,7 @@ body .header .navi {
 body .header .navi-list-item {
   margin-bottom: 35px;
 }
-body .header .navi-list-item-a {
+body .header .navi-list-item a {
   position: relative;
   font-size: 20px;
   font-family: sans-serif;
@@ -85,7 +85,7 @@ body .header .navi-list-item-a {
   color: #fff;
   letter-spacing: 3px;
 }
-body .header .navi-list-item-a::after, body .header .navi-list-item-a::before {
+body .header .navi-list-item a::after, body .header .navi-list-item a::before {
   position: -webkit-absolute;
   position: absolute;
   display: block;
@@ -94,22 +94,22 @@ body .header .navi-list-item-a::after, body .header .navi-list-item-a::before {
   transition: all 0.3s linear;
   z-index: 20;
 }
-body .header .navi-list-item-a::after {
+body .header .navi-list-item a::after {
   top: 29px;
   width: 0px;
   height: 1px;
 }
-body .header .navi-list-item-a::before {
+body .header .navi-list-item a::before {
   bottom: -8px;
   left: 0px;
   width: 0px;
   height: 0px;
   transform: rotate(37deg);
 }
-body .header .navi-list-item-a:hover::after {
+body .header .navi-list-item a:hover::after {
   width: 120px;
 }
-body .header .navi-list-item-a:hover::before {
+body .header .navi-list-item a:hover::before {
   bottom: -4px;
   left: 102px;
   width: 20px;
