@@ -79,11 +79,13 @@ body .header .navi-list-item {
 }
 body .header .navi-list-item a {
   position: relative;
+  display: block;
   font-size: 20px;
   font-family: sans-serif;
   font-weight: lighter;
   color: #fff;
   letter-spacing: 3px;
+  line-height: 20px;
 }
 body .header .navi-list-item a::after, body .header .navi-list-item a::before {
   position: -webkit-absolute;
