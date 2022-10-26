@@ -91,13 +91,15 @@ body {
             &-list-item {
                 margin-bottom: 35px;
                 a {
-                    position: relative;
+                    position: relative; 
+                    display: block;
                     font-size: 20px;
                     font-family: sans-serif;
                     font-weight: lighter;
                     color: #fff;
                     letter-spacing: 3px;
-
+                    line-height: 20px;
+                   
                     &::after,
                     &::before {
                         position: -webkit-absolute;
