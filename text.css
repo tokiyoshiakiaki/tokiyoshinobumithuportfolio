@@ -18,7 +18,7 @@ html body img {
 }
 html body .fadein {
   transform: translateY(30%);
-  transition: all 1.2s ease-in-out;
+  transition: all 1.2s linear;
   opacity: 0;
 }
 html body .fadein.show {
@@ -32,11 +32,11 @@ html body .header {
   z-index: 50;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  transition: all 0.5s;
+  transition: all 0.5s linear;
 }
 html body .header.active {
   left: 0%;
-  transition: all 0.5s;
+  transition: all 0.5s linear;
 }
 @media screen and (max-width: 880px) {
   html body .header {
@@ -114,9 +114,6 @@ html body .header .navi-list-item a:hover::before {
   left: 102px;
   width: 20px;
   height: 1px;
-}
-html body .header .navi-list-item :-webkit-full-page-media, html body .header .navi-list-item _:future, html body .header .navi-list-item .item:root .navi-list-item-a:hover::before {
-  bottom: -1px;
 }
 html body .header.active {
   left: 0%;
