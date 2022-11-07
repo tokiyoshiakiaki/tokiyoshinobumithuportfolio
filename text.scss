@@ -35,35 +35,57 @@ html {
         }
     
         .fadein {
-            transform: translateY(30%);
-            transition:  all 1.2s ease-in-out;
+            $fadein-transform: translateY(30%);
+            $fadein: all 1.2s linear;
+            -webkit-transform: $fadein-transform;
+            -moz-transform: $fadein-transform;
+            -ms-transform: $fadein-transform;
+            transform: $fadein-transform;
+            -webkit-transition: $fadein;
+            -moz-transition:  $fadein;
+            -ms-transition:  $fadein;
+            transition:  $fadein;
             opacity: 0;
         }
     
         .fadein.show {
+            -webkit-transform: translateY(0%);
+            -moz-transform: translateY(0%);
+            -ms-transform: translateY(0%);
             transform: translateY(0%);
             opacity: 1;
         }
     
         .header {
+            $header-transition:  all 0.5s linear;
             position: fixed;
             top: 0px;
             left: 0px;
             z-index: 50;
             height: 100vh;
             background:rgba($color: #000000, $alpha: 0.5);
-            transition: all 0.5s;
+            -webkit-transition: $header-transition;
+            -moz-transition:  $header-transition;
+            -ms-transition:  $header-transition;
+            transition:$header-transition;
             
             &.active {
                 left: 0%;
-                transition: all 0.5s;
+                -webkit-transition: $header-transition;
+                -moz-transition:  $header-transition;
+                -ms-transition:  $header-transition;
+                transition:$header-transition;
             }
             
             @include m.mq(tab) {
+                $header-transition_tab:all 0.3s linear;
                 width: 100vw;
                 height: 100vh;
                 left: -200%;
-                transition: all 0.3s linear;
+                -webkit-transition:  $header-transition_tab;
+                -moz-transition:   $header-transition_tab;
+                -ms-transition:   $header-transition_tab;
+                transition: $header-transition_tab;
             }
             .logo {
                 margin: 0 0 45px;
@@ -105,11 +127,15 @@ html {
                        
                         &::after,
                         &::before {
+                            $navi-transition: all 0.3s linear;
                             position: absolute;
                             display: block;
                             content: "";
                             background: $main-color;
-                            transition: all 0.3s linear;
+                            -webkit-transition: $navi-transition;
+                            -moz-transition: $navi-transition;
+                            -ms-transition: $navi-transition;
+                            transition: $navi-transition;
                             z-index: 20;
                             
                         }
@@ -120,11 +146,15 @@ html {
                             
                         }  
                         &::before {
+                            $navi-transform-before: rotate(37deg);
                             bottom: -8px;
                             left: 0px;
                             width: 0px;
                             height: 0px;
-                            transform: rotate(37deg);
+                            -webkit-transform:  $navi-transform-before;
+                            -moz-transform:  $navi-transform-before;
+                            -ms-transform:  $navi-transform-before;
+                            transform: $navi-transform-before;
                         }  
                         &:hover::after {
                             width: 120px;
@@ -136,11 +166,7 @@ html {
                             width: 20px;
                             height: 1px;
                         }
-    
                     }  
-                    :-webkit-full-page-media, _:future, .item:root .navi-list-item-a:hover::before  {
-                        bottom: -1px;
-                    }
                 }
                 
             }
@@ -208,6 +234,13 @@ html {
                         }
                 }
                 .list-btn {
+                    $list-btn-transition: all 0.2s linear;
+                    @mixin list-btn-transition-item {
+                        -webkit-transition:  $list-btn-transition;
+                        -moz-transition:  $list-btn-transition;
+                        -ms-transition:  $list-btn-transition;
+                        transition: $list-btn-transition;
+                    }
                     position: fixed;
                     display: flex;
                     justify-content: space-between;
@@ -217,12 +250,12 @@ html {
                     width: 30px;
                     height: 20px;
                     z-index: 100;
-                    transition: all 0.2s linear;
+                    @include list-btn-transition-item;
                     div {
                         width: 30px;
                         height: 2px;
                         background: $sabu-color01;
-                        transition: all 0.2s linear;
+                        @include list-btn-transition-item;
                     }
                     @media screen and (min-width:880px) {
                         display: none;
@@ -230,19 +263,25 @@ html {
                     }
     
                     &.active {
+                        $div-transform01: translateY(9px) rotate(45deg);
+                        $div-transform02: translateY(-9px) rotate(-45deg);
                         div:nth-child(1) {
                             background: $main-color;
-                            transform: translateY(9px) rotate(45deg);
-                        transition: all 0.2s linear;
+                            -webkit-transform:  $div-transform01;
+                            -moz-transform:  $div-transform01;
+                            transform:  $div-transform01;
+                            @include list-btn-transition-item;
                         }
                         div:nth-child(2) {
                             width: 0px;
-                            transition: all 0.2s linear;
+                            @include list-btn-transition-item;
                         }
                         div:nth-child(3) {
                             background: $main-color;
-                            transform:translateY(-9px) rotate(-45deg);
-                            transition: all 0.2s linear;
+                            -webkit-transform:  $div-transform02;
+                            -moz-transform:  $div-transform02;
+                            transform: $div-transform02;
+                            @include list-btn-transition-item;
                         }
                     }
                 }
@@ -390,18 +429,21 @@ html {
                             position: absolute;
                             top: 6px;
                             left: -35px;
+                            -webkit-transform: translateY(0px);
+                            -moz-transform: translateY(0px);
+                            -ms-transform: translateY(0px);
                             transform: translateY(0px);
                             display: block;
                             content: "";
                             width: 21px;
                             height: 21px;
-                            background:  $sabu-color02;
+                            background: $sabu-color02;
                         }
                         &:nth-child(odd)::before {
-                            background:    $sabu-color02;
+                            background: $sabu-color02;
                         }
                         &:nth-child(even)::before {
-                            background:   $sabu-color01;
+                            background: $sabu-color01;
                         }
                     }
                     &::before {
@@ -669,7 +711,7 @@ html {
                     a {
                         margin-left: 5px;
                         color: $sabu-color02;
-                        border-bottom: solid 1px$sabu-color01;
+                        border-bottom: solid 1px $sabu-color01;
                         &:hover {
                             color: $sabu-color01;
                             border-bottom: 0;
