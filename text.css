@@ -57,6 +57,12 @@ html body .header .logo {
 @media screen and (max-width: 880px) {
   html body .header .logo {
     margin: 0 0 20px;
+    padding: 55px 20px 0 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body .header .logo {
+    padding: 35px 20px 0 20px;
   }
 }
 html body .header .logo a {
@@ -185,7 +191,7 @@ html body .main .mv .list-btn {
   justify-content: space-between;
   flex-direction: column;
   top: 20px;
-  left: 90%;
+  right: 20px;
   width: 30px;
   height: 20px;
   z-index: 100;
@@ -219,7 +225,7 @@ html body .main .mv .list-btn.active div:nth-child(3) {
 html body .main .mv .logo-responsive {
   position: absolute;
   display: none;
-  bottom: 109.5%;
+  bottom: 109%;
   left: 21px;
   font-size: 40px;
   font-family: sans-serif;
