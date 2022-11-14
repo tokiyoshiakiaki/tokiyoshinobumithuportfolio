@@ -97,6 +97,10 @@ html {
     
                 @include m.mq(tab) {
                     margin: 0 0 20px;
+                    padding: 55px 20px 0 20px;
+                }
+                @include m.mq(sp) {
+                    padding: 35px 20px 0 20px;
                 }
     
                 a {
@@ -246,7 +250,7 @@ html {
                     justify-content: space-between;
                     flex-direction: column;
                     top: 20px;
-                    left: 90%;
+                    right: 20px;
                     width: 30px;
                     height: 20px;
                     z-index: 100;
@@ -288,7 +292,7 @@ html {
                 .logo-responsive {
                     position: absolute;
                     display: none;
-                    bottom: 109.5%;
+                    bottom: 109%;
                     left: 21px;
                     font-size: 40px;
                     font-family: sans-serif;
