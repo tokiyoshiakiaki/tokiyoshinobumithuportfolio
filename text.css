@@ -225,7 +225,7 @@ html body .main .mv .list-btn.active div:nth-child(3) {
 html body .main .mv .logo-responsive {
   position: absolute;
   display: none;
-  bottom: 109%;
+  bottom: 108%;
   left: 21px;
   font-size: 40px;
   font-family: sans-serif;
@@ -498,12 +498,6 @@ html body .main #work {
 html body .main #work .contents-title {
   width: 100%;
 }
-@media screen and (max-width: 880px) {
-  html body .main #work .contents-work:nth-of-type(3),
-html body .main #work .contents-work:nth-of-type(4) {
-    display: none;
-  }
-}
 html body .main #work .contents-work {
   width: 48%;
   margin-bottom: 50px;
@@ -569,27 +563,6 @@ html body .main #work .contents-work .web-url a:hover {
   color: #000;
   border-bottom: 0;
   opacity: 0.8;
-}
-html body .main #work .readmore-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 150px;
-  height: 40px;
-  background: #292c2f;
-  border-radius: 3px;
-  transition: all 0.2s;
-}
-html body .main #work .readmore-btn:hover {
-  background: #fff;
-  transition: all 0.2s;
-}
-html body .main #work .readmore-btn:hover a {
-  color: #292c2f;
-}
-html body .main #work .readmore-btn a {
-  color: #fff;
 }
 html body .main #future .contents-title-inner {
   background-image: url("./images/future.webp");
