@@ -225,7 +225,7 @@ html body .main .mv .list-btn.active div:nth-child(3) {
 html body .main .mv .logo-responsive {
   position: absolute;
   display: none;
-  bottom: 108%;
+  bottom: 107%;
   left: 21px;
   font-size: 40px;
   font-family: sans-serif;
