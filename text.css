@@ -150,41 +150,6 @@ html body .main .mv .mv-images::before {
     background-position: 80% 60%;
   }
 }
-html body .main .mv .mv-text {
-  position: absolute;
-  bottom: 105%;
-  left: 30%;
-  font-size: 26px;
-  color: #292c2f;
-  font-family: sans-serif;
-  letter-spacing: 5px;
-  text-shadow: 0px 0px 2px #fff;
-  z-index: 10;
-}
-@media screen and (max-width: 1200px) {
-  html body .main .mv .mv-text {
-    left: 40%;
-    width: 340px;
-  }
-}
-@media screen and (max-width: 880px) {
-  html body .main .mv .mv-text {
-    left: 21px;
-  }
-}
-html body .main .mv .mv-text br {
-  display: none;
-}
-@media screen and (max-width: 1200px) {
-  html body .main .mv .mv-text {
-    padding: 0;
-    font-size: 23px;
-    line-height: 40px;
-  }
-  html body .main .mv .mv-text br {
-    display: block;
-  }
-}
 html body .main .mv .list-btn {
   position: fixed;
   display: flex;
@@ -243,6 +208,62 @@ html body .main .mv .logo-responsive a {
 }
 html body .main .mv .logo-responsive.active {
   display: none;
+}
+html body .main .mv .scroll-down {
+  position: absolute;
+  top: -170px;
+  right: 2%;
+}
+html body .main .mv .scroll-down-text {
+  font-size: 14px;
+  letter-spacing: 1px;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+}
+html body .main .mv .scroll-down-item {
+  position: absolute;
+  top: 105px;
+  left: 6px;
+  height: 60px;
+  overflow-y: hidden;
+}
+html body .main .mv .scroll-down-item span {
+  display: block;
+  width: 2px;
+  height: 60px;
+  background: #292c2f;
+  animation: scroll-down-anime 3s ease infinite;
+  -webkit-animation: scroll-down-anime 3s ease infinite;
+  -moz-animation: scroll-down-anime 3s ease infinite;
+  -ms-animation: scroll-down-anime 3s ease infinite;
+}
+@-webkit-keyframes scroll-down-anime {
+  0% {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+  }
+}
+@keyframes scroll-down-anime {
+  0% {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+  }
 }
 html body .main .contents {
   scroll-margin-top: 50px;
