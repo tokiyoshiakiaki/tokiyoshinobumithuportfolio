@@ -205,38 +205,6 @@ html {
                     }
                     
                 }
-                .mv-text {
-                    position: absolute;
-                    bottom: 105%;
-                    left: 30%;
-                    font-size: 26px;
-                    color:  $sabu-color01;
-                    font-family: sans-serif;
-                    letter-spacing: 5px;
-                    text-shadow: 0px 0px 2px $main-color;
-                    z-index: 10;
-        
-                    @include m.mq(pc01) {
-                        left: 40%;
-                        width: 340px;
-                    }
-                    @include m.mq(tab) {
-                        left: 21px;
-                    }
-        
-                    br {
-                        display: none;
-                        }
-                        @include m.mq(pc01) {
-                            padding: 0;
-                            font-size:23px;
-                            line-height: 40px;
-                            
-                            br {
-                                display: block;
-                            }
-                        }
-                }
                 .list-btn {
                     $list-btn-transition: all 0.2s linear;
                     @mixin list-btn-transition-item {
@@ -309,6 +277,52 @@ html {
                 }
                 .logo-responsive.active {
                     display:none ;
+                }
+                .scroll-down {
+                    position: absolute;
+                    top: -170px;
+                    right: 2%;
+                    
+                    &-text {
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        writing-mode: vertical-lr;
+                        
+                    }
+                    &-item {
+                        position: absolute;
+                        top: 105px;
+                        left: 6px;
+                        height: 60px;
+                        overflow-y: hidden;
+                        span {
+                            display: block;
+                            width: 2px;
+                            height: 60px;
+                            background: $sabu-color01;
+                            $scroll-down-anime-item: scroll-down-anime 3s ease infinite;
+                            animation: $scroll-down-anime-item;
+                            -webkit-animation: $scroll-down-anime-item;
+                            -moz-animation: $scroll-down-anime-item;
+                            -ms-animation: $scroll-down-anime-item;
+                        }
+                        @keyframes scroll-down-anime {
+                            0% {
+                                $scroll-down-anime-transform0: translateY(-100%);
+                                transform: $scroll-down-anime-transform0;
+                                -webkit-transform: $scroll-down-anime-transform0;
+                                -moz-transform: $scroll-down-anime-transform0;
+                                -ms-transform: $scroll-down-anime-transform0;
+                            }
+                            100% {
+                                $scroll-down-anime-transform100: translateY(100%);
+                                transform: $scroll-down-anime-transform100;
+                                -webkit-transform: $scroll-down-anime-transform100;
+                                -moz-transform: $scroll-down-anime-transform100;
+                                -ms-transform: $scroll-down-anime-transform100;
+                            }
+                        }
+                    }
                 }
             }
     
